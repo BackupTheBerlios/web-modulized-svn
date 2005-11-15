@@ -26,4 +26,34 @@
  * It also can be called for updating the frame work.
  */
  
+printHeader();
+printBody();
+printFooter();
+
+function printBody(){
+	echo <<<EOF
+<h1>Hello World!</h1>\n
+
+EOF;
+} 
+
+function printHeader(){
+	echo <<<EOF
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta name="description" content="" />
+	<meta name="author" content="Steffen Lorch" />
+	<meta name="keywords" content="" />
+	<title>webmodulized</title>
+</head>
+<body>
+
+EOF;
+}
+
+function printFooter(){
+	echo "</body>\n</html>";
+}
+
 ?>
