@@ -20,4 +20,11 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
  
+ /*
+ * Created on 06.11.2005
+ *
+ * This is the core file containing the management of all
+ * modules
+ */
+ 
 ?>
