@@ -26,34 +26,37 @@
  * It also can be called for updating the frame work.
  */
  
-printHeader();
-printBody();
-printFooter();
+$HEADER_DATA = printHeader();
+$BODY_DATA = printBody();
+$FOOTER_DATA = printFooter();
 
 function printBody(){
-	echo <<<EOF
-<h1>Hello World!</h1>\n
-
-EOF;
+	$BODY_DATA = "<h1>Hello World!</h1>\n";
+	
+	return $BODY_DATA;
+	
 } 
 
 function printHeader(){
-	echo <<<EOF
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-	<meta name="description" content="" />
-	<meta name="author" content="Steffen Lorch" />
-	<meta name="keywords" content="" />
-	<title>webmodulized</title>
-</head>
-<body>
+	$HEADER_DATA = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">".
+"<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">".
+"<head>".
+"	<meta name=\"description\" content=\"\" />".
+"	<meta name=\"author\" content=\"\" />".
+"	<meta name=\"keywords\" content=\"\" />".
+"	<title>webmodulized</title>".
+"</head>".
+"<body>";
 
-EOF;
+return $HEADER_DATA;
+
 }
 
 function printFooter(){
-	echo "</body>\n</html>";
+	$FOOTER_DATA = "</body>\n</html>";
+	
+	return $FOOTER_DATA;
+	
 }
 
 ?>
