@@ -23,8 +23,7 @@
  /*
  * Created on 06.11.2005
  *
- * This is the core file containing the management of all
- * modules
+ * This file manages the database communication
  */
  
 ?>
