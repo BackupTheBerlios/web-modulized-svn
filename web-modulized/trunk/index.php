@@ -25,7 +25,10 @@
  * This file must be called before you can use the frame work.
  * It also can be called for updating the frame work.
  */
- 
+session_start();
+/* modify $_SESSION */
+session_write_close();
+
 $HEADER_DATA = printHeader();
 $BODY_DATA = printBody();
 $FOOTER_DATA = printFooter();
