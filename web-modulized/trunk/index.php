@@ -29,12 +29,14 @@ session_start();
 /* modify $_SESSION */
 session_write_close();
 
+
+$CURRENT_ID = session_id();
 $HEADER_DATA = printHeader();
 $BODY_DATA = printBody();
 $FOOTER_DATA = printFooter();
 
 function printBody(){
-	$BODY_DATA = "<h1>Hello World!</h1>\n";
+	$BODY_DATA = "<h1>Hello ".$CURRENT_ID."!</h1>\n";
 	
 	return $BODY_DATA;
 	
