@@ -35,13 +35,13 @@ include "./conf/MyConf.php";
 
 /* end general includes   */
 
-$CURRENT_ID = session_id();
+# $CURRENT_ID = session_id();
 $HEADER_DATA = printHeader($CURRENT_ID);
 $BODY_DATA = printBody();
 $FOOTER_DATA = printFooter();
 
-function printBody($CURRENT_ID){
-	$BODY_DATA = "<h1>Hello ".$CURRENT_ID."!</h1>\n";
+function printBody(){
+	$BODY_DATA = "<h1>Hello!</h1>\n";
 	
 	return $BODY_DATA;
 	
