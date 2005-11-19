@@ -35,10 +35,16 @@ include "./conf/MyConf.php";
 
 /* end general includes   */
 
-# $CURRENT_ID = session_id();
-$HEADER_DATA = printHeader($CURRENT_ID);
+$HEADER_DATA = printHeader();
 $BODY_DATA = printBody();
 $FOOTER_DATA = printFooter();
+
+/* build page */
+$PAGE = $HEADER_DATA.$BODY_DATA.$FOOTER_DATA;
+
+
+/* send page */
+echo $PAGE;
 
 function printBody(){
 	$BODY_DATA = "<h1>Hello!</h1>\n";
@@ -48,22 +54,22 @@ function printBody(){
 } 
 
 function printHeader(){
-	$HEADER_DATA = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">".
-"<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">".
+	$HEADER_DATA = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \n \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">".
+"<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n".
 "<head>".
-"	<meta name=\"description\" content=\"\" />".
-"	<meta name=\"author\" content=\"\" />".
-"	<meta name=\"keywords\" content=\"\" />".
-"	<title>webmodulized</title>".
-"</head>".
-"<body>";
+"	<meta name=\"description\" content=\"\" />\n".
+"	<meta name=\"author\" content=\"\" />\n".
+"	<meta name=\"keywords\" content=\"\" />\n".
+"	<title>webmodulized</title>\n".
+"</head>\n".
+"<body>\n";
 
 return $HEADER_DATA;
 
 }
 
 function printFooter(){
-	$FOOTER_DATA = "</body>\n</html>";
+	$FOOTER_DATA = "</body>\n</html>\n";
 	
 	return $FOOTER_DATA;
 	
