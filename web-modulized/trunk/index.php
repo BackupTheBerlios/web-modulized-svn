@@ -19,23 +19,28 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
- /*
+/*
  * Created on 06.11.2005
  *
  * This file must be called before you can use the frame work.
  * It also can be called for updating the frame work.
- */
+*/
+
 session_start();
 /* modify $_SESSION */
 session_write_close();
 
+/* begin general includes */
+include "./conf/MyConf.php";
+
+/* end general includes   */
 
 $CURRENT_ID = session_id();
-$HEADER_DATA = printHeader();
+$HEADER_DATA = printHeader($CURRENT_ID);
 $BODY_DATA = printBody();
 $FOOTER_DATA = printFooter();
 
-function printBody(){
+function printBody($CURRENT_ID){
 	$BODY_DATA = "<h1>Hello ".$CURRENT_ID."!</h1>\n";
 	
 	return $BODY_DATA;
