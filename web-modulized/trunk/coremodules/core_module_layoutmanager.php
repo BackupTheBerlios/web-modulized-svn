@@ -20,44 +20,16 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
  
- /*
- * Created on 06.11.2005
- *
- * This file manages the database communication
- */
-
-function connect()
-{
- $host="localhost";
- $user="webmodulized";
- $pwd="webmodulized";
- $database="web-modulized";
- 
- //create connection to the database
- $server=mysql_connect($host,$user,$pwd);
- if ($server)
- {
-   //choose the database an return the connection handler
-   $db_connection=mysql_select_db($database,$server);
-   if ($db_connection)
-   {
-      return $server;
-   }
-   else
-   {
-     //If the database isn't existing or could not be reached
-     echo "Please check the name of the database";
-     echo mysql_errno()." : ".mysql_error()."<br>\n";
-     return 0;
-   }
- }
- else
- {
-   //if no a connection couldn't be astablished 0 will be return and an Error message will be given
-   echo "A connection to the database couldn\'t be astablished";
-   echo mysql_errno()." : ". mysql_error()."<br>\n";
-   return 0;
- }
-}
-
+ /*This module manages where to put the different module outputs on the page.
+  * Than returns the whole page to index.php where it will be displayed
+  */
+  
+  function generatePage()
+  {
+  	$page = "";
+  	$page = $page.htmlStart();
+  	$page = $page.htmlStop();
+  	return $page;
+  }
+  
 ?>
