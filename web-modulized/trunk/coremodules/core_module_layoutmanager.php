@@ -28,6 +28,7 @@
   {
   	$page = "";
   	$page = $page.htmlStart();
+  	$page = $page."Dies ist meine Seite!";
   	$page = $page.htmlStop();
   	return $page;
   }

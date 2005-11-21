@@ -31,6 +31,7 @@
  require_once("../coremodules/core_module_systemmessagemanagement.php"); //managing the Errormessages, warnings, all the messages
  require_once("../coremodules/core_module_layoutmanager.php"); //arranges the outputs of all the (core-)modules
  require_once("../coremodules/core_module_usermanagement.php"); //manages the users and their privileges
+ require_once("../libs/lib_html.php"); //containing all necessary html functions
  
 function getPage()
 {
@@ -52,7 +53,7 @@ function requireingOptionalCoreModules($require_path)
 	$array_list_of_core_modules = getListOfCoreModules($require_path);
 	
   	//requiring the modules
-	while ($current_coreModule_Element = array_pop($array_list_of_core_modules)) 
+	while ($current_coreModule_Element == array_pop($array_list_of_core_modules)) 
 	{
   		if (!requireCoreModule($require_path,$current_coreModule_Element )) 
 		{
@@ -147,41 +148,4 @@ function RequireModule ($require_path,$listOfModulenames)
 	}
 	return $module_exists;
 }
-?>
-  
- 
- /*
-  * show_page ()
-  * 
-  * This function collects all the data from the core moduls
-  * and sends it to the browser
-  */
- 
- function show_page ()
- {
- 	
- }
- 
- /*
-  * update ()
-  * 
-  * This function calls all the core moduls for notice them 
-  * that there has been made changes to data
-  */
-  
-  function update ()
-  {
-  }
-  
-  /*
-   * initialize ()
-   * 
-   * If the frame work is called for the first time (not
-   * for setting up) this function will be called first, to
-   * initialize all variables and enviroment settings
-   */
-   
-   function initialize ()
-   {
-   }
 ?>

@@ -35,7 +35,8 @@
 
 function htmlStart()
 {
-	echo 	"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">".
+	$htmlheader = "";
+	$htmlheader ="<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">".
 			"<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">".
 			"<head>\n".
 			"	<meta name=\"description\" content=\"\" />\n".
@@ -44,6 +45,7 @@ function htmlStart()
 			"	<title>webmodulized</title>\n".
 			"</head>\n".
 			"<body>\n";
+    return $htmlheader;
 }
 
 
@@ -55,9 +57,10 @@ function htmlStart()
 
 function htmlStop()
 {
-	echo "	</body>\n";
-	echo "</html>\n";
+	$htmlfooter = "";
+	$htmlfooter= "	</body>\n".
+				 "</html>\n";
+	return $htmlfooter;
 }
 ?>
- 
-?>
+
