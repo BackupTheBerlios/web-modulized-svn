@@ -28,10 +28,15 @@
 
 function connect()
 {
- $host="localhost";
- $user="webmodulized";
- $pwd="webmodulized";
- $database="web-modulized";
+/* here use the configuration of the MyConf.php file in the "conf"
+ * directory.
+ * This file is loaded in den core file at the start of all parsings
+ */
+ 
+ $host=$MYSQL_SERVER_DNS;
+ $user=$MYSQL_SERVER_USER;
+ $pwd=$MYSQL_SERVER_PWD;
+ $database=$MYSQL_SERVER_DB;
  
  //create connection to the database
  $server=mysql_connect($host,$user,$pwd);

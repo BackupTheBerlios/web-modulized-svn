@@ -27,19 +27,28 @@
  * or in the administration menu of your side
 ***************************************************************************/
 
-/* installation configuration */
-$WEB_MODULIZED_ROOTPATH="";
+/*  installation configuration  */
+  
+/* dont't know if we neet that one:
+ * 
+ * $WEB_MODULIZED_ROOTPATH="";
+ * */
+
 
 /* sidespezific configuration */
-$WEB_MODULIZED_DOMAINNAME="";
-$WEB_MODULIZED_SIDENAME="";
-$WEB_MODULIZED_TOPIC="";
+$WEB_MODULIZED_DNSDOMAINNAME="webmodulized.org";
+$WEB_MODULIZED_SIDENAME="Web-Modulized.org";
+$WEB_MODULIZED_TOPIC="a modular homepage configuration toolkit";
 
 /* mysql configuration */
-$MYSQL_SERVER_NAME="";
-$MYSQL_SERVER_USER="";
-$MYSQL_SERVER_DBNAME="";
-$WEB_MODULIZED_DB_PREFIX="";
+$MYSQL_SERVER_DNS="localhost"; // use localhost for 172.0.0.1
+$MYSQL_SERVER_USER="webmodulized"; // database user of web-modulized
+$MYSQL_SERVER_PWD="<your password>"; // password on mysql server for $MYSQL_SERVER_USER
+$MYSQL_SERVER_DBNAME="webmodulized"; // name of database on mysql server
+$WEB_MODULIZED_DB_PREFIX="alpha"; // prefix for simultaniour installations
 
+
+/* DO NOT EDIT THIS SECTION */
+$MYSQL_SERVER_DB=$MYSQL_SERVER_DBNAME.'-'.$WEB_MODULIZED_DB_PREFIX;
 
 ?>

@@ -28,6 +28,7 @@
  * software structure documentation on http://www.web-modulized.org
  * @todo there need to be an error message if a core module couldn't be loaded
  */
+ require_once("./conf/MyConf.php"); // managing user specific configuration
  require_once("./coremodules/core_module_systemmessagemanagement.php"); //managing the Errormessages, warnings, all the messages
  require_once("./coremodules/core_module_layoutmanager.php"); //arranges the outputs of all the (core-)modules
  require_once("./coremodules/core_module_usermanagement.php"); //manages the users and their privileges
