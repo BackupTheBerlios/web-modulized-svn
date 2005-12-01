@@ -47,6 +47,8 @@ $MYSQL_SERVER_PWD="<your password>"; // password on mysql server for $MYSQL_SERV
 $MYSQL_SERVER_DBNAME="webmodulized"; // name of database on mysql server
 $WEB_MODULIZED_DB_PREFIX="alpha"; // prefix for simultaniour installations
 
+/* style configuration */
+$MY_STYLE="default";
 
 /* DO NOT EDIT THIS SECTION */
 $MYSQL_SERVER_DB=$MYSQL_SERVER_DBNAME.'-'.$WEB_MODULIZED_DB_PREFIX;
