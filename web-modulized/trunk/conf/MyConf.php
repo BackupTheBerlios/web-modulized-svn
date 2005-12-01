@@ -20,12 +20,12 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
  
-/***************************************************************************
+/****************************************************************************
  *  this file includes the main configuration parameters concerning this 
  * spezific installtion of WEB-MODULIZED.ORG.
  * you will have to modify this parameters ether by your favourite editor
  * or in the administration menu of your side
-***************************************************************************/
+****************************************************************************/
 
 /*  installation configuration  */
   
@@ -50,7 +50,9 @@ $WEB_MODULIZED_DB_PREFIX="alpha"; // prefix for simultaniour installations
 /* style configuration */
 $MY_STYLE="default";
 
-/* DO NOT EDIT THIS SECTION */
+/* ----------------------------------------------------------------------- */
+/*                  DO NOT EDIT BELOW THERE SECTION                        */
+/* ----------------------------------------------------------------------- */
 $MYSQL_SERVER_DB=$MYSQL_SERVER_DBNAME.'-'.$WEB_MODULIZED_DB_PREFIX;
 
 ?>
