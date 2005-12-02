@@ -22,6 +22,7 @@
 /*
  * Created on 02.112.2005
  *
- * indexing file for default theme
+ * indexing file for default theme 
+ */
 
 ?>
