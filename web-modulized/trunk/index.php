@@ -27,6 +27,7 @@
 */
  //loading required files
  //the core managing the whole system
+ 
  require_once("./core/core.php");
 
 $page = getPage();
