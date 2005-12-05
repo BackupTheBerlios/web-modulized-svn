@@ -50,6 +50,17 @@ $WEB_MODULIZED_DB_PREFIX="alpha"; // prefix for simultaniour installations
 /* style configuration */
 $MY_STYLE="default";
 
+/***************************************************************************
+	meta tag configuration:
+	here you can state your meta tags. I will modify them in future
+/***************************************************************************/
+
+/* Section name */
+$META_CONTENT="Test User";
+
+/* Section description */
+$META_DESCRIPTION="Yet anouther php homepage";
+
 /* ----------------------------------------------------------------------- */
 /*                  DO NOT EDIT BELOW THERE SECTION                        */
 /* ----------------------------------------------------------------------- */
