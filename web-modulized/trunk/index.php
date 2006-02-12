@@ -35,5 +35,4 @@ $page = getPage();
 
 echo $page;
 
-
 ?>
