@@ -52,7 +52,8 @@ function connect()
    else
    {
      //If the database isn't existing or could not be reached
-     echo "Please check the name of the database";
+     mysql_close($server);
+     echo "Database ".$database." not found on server ".$host;
      echo mysql_errno()." : ".mysql_error()."<br>\n";
      return 0;
    }
@@ -60,10 +61,29 @@ function connect()
  else
  {
    //if no a connection couldn't be astablished 0 will be return and an Error message will be given
-   echo "A connection to the database couldn\'t be astablished";
+   echo "A connection to the server ".$host." couldn\'t be astablished";
    echo mysql_errno()." : ". mysql_error()."<br>\n";
    return 0;
  }
+}
+
+function database_query($query)
+{
+	$server = connect();
+	if ($server!= 0) 
+	{
+		$query_result = mysql_query($query,$server);
+		if ($query_result !="" AND $query_result != 0)
+		{
+			mysql_close($server);
+			return $query_result;
+		}
+		else
+		{
+			/* has to be detailized!!!*/
+   			return 0;
+		}
+	}	
 }
 
 ?>
