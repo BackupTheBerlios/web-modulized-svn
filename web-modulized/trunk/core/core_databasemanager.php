@@ -40,6 +40,7 @@ function connect()
  
  //create connection to the database
  $server=mysql_connect($host,$user,$pwd);
+ 
  if ($server)
  {
    //choose the database an return the connection handler

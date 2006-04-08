@@ -32,11 +32,12 @@
 /* dont't know if we neet that one:
  * 
  * $WEB_MODULIZED_ROOTPATH="";
- * */
+ *
+*/
 
 
 /* sidespezific configuration */
-$WEB_MODULIZED_DNSDOMAINNAME="webmodulized.org";
+$WEB_MODULIZED_DNSDOMAINNAME="web-modulized.org";
 $WEB_MODULIZED_SIDENAME="Web-Modulized.org";
 $WEB_MODULIZED_TOPIC="a modular homepage configuration toolkit";
 
@@ -44,8 +45,8 @@ $WEB_MODULIZED_TOPIC="a modular homepage configuration toolkit";
 $MYSQL_SERVER_DNS="localhost"; // use localhost for 172.0.0.1
 $MYSQL_SERVER_USER="webmodulized"; // database user of web-modulized
 $MYSQL_SERVER_PWD="<your password>"; // password on mysql server for $MYSQL_SERVER_USER
-$MYSQL_SERVER_DBNAME="webmodulized"; // name of database on mysql server
-$WEB_MODULIZED_DB_PREFIX="alpha"; // prefix for simultaniour installations
+$MYSQL_SERVER_DBNAME="webmodulized"; // name of database on mysql server, together with the prefix and an underscore
+$WEB_MODULIZED_DB_PREFIX="alpha"; // prefix for simultanious installations, 
 
 /* style configuration */
 $MY_STYLE="default";
@@ -54,6 +55,6 @@ $MY_STYLE="default";
 /* ----------------------------------------------------------------------- */
 /*                  DO NOT EDIT BELOW THERE SECTION                        */
 /* ----------------------------------------------------------------------- */
-$MYSQL_SERVER_DB=$MYSQL_SERVER_DBNAME.'-'.$WEB_MODULIZED_DB_PREFIX;
+$MYSQL_SERVER_DB=$WEB_MODULIZED_DB_PREFIX.'_'.$MYSQL_SERVER_DBNAME;
 
 ?>
